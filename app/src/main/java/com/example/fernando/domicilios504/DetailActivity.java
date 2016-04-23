@@ -30,4 +30,6 @@ public class DetailActivity extends AppCompatActivity {
         image.setImageResource(item.getImage());
 
     }
+
+    
 }
