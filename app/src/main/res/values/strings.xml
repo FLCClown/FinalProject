@@ -2,36 +2,36 @@
     <string name="app_name">Domicilios504</string>
     
     <string name="Title1">Pizza</string>
-    <string name="Image1"></string>
     <string name="Description1">Delicioso queso mozzarella con toppings</string>
+    <string name="Price1">140</string>
 
     <string name="Title2">Hamburguesa</string>
-    <string name="Image2"></string>
     <string name="Description2">Gran emparedado de carne de res</string>
+    <string name="Price2">110</string>
     
     <string name="Title3">Pollo</string>
-    <string name="Image3"></string>
     <string name="Description3">Jugoso pollo asado con tajadas</string>
+    <string name="Price3">90</string>
     
     <string name="Title4">Pupusas</string>
-    <string name="Image4"></string>
     <string name="Description4">Apetecibles pupusas de chicharrón y quesillo</string>
+    <string name="Price4">75</string>
 
     <string name="Title5">Baleadas</string>
-    <string name="Image5"></string>
     <string name="Description5">Tradicionales tortillas de harina con frijoles</string>
+    <string name="Price5">35</string>
 
     <string name="Title6">Arroz Chino</string>
-    <string name="Image6"></string>
     <string name="Description6">Basto plato de arroz frito con carne y verduras</string>
+    <string name="Price6">130</string>
 
-    <string name="Title7">Pollo</string>
-    <string name="Image7"></string>
-    <string name="Description7">Jugoso pollo asado con tajadas</string>
+    <string name="Title7">Sopa</string>
+    <string name="Description7">Enorme plato hondo lleno de sopa de res</string>
+    <string name="Price7">80</string>
 
-    <string name="Title8">Pupusas</string>
-    <string name="Image8"></string>
-    <string name="Description8">Apetecibles pupusas de chicharrón y quesillo</string>
+    <string name="Title8">Tacos</string>
+    <string name="Description8">Picantes tacos fritos enrollados</string>
+    <string name="Price8">40</string>
     
     
 </resources>

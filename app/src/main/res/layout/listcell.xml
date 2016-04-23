@@ -9,7 +9,9 @@
         android:id="@+id/cell_Image"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,4 +35,15 @@
         android:layout_alignLeft="@+id/cell_Title"
         android:layout_alignStart="@+id/cell_Title"
         android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0Lps."
+        android:id="@+id/cell_Price"
+        android:layout_alignTop="@+id/cell_Title"
+        android:layout_toRightOf="@+id/cell_Title"
+        android:layout_toEndOf="@+id/cell_Title"
+        android:layout_marginLeft="120dp"
+        android:textSize="40dp" />
 </RelativeLayout>

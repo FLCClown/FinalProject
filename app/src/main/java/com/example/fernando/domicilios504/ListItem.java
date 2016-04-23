@@ -8,11 +8,14 @@ public class ListItem {
     private int item_Title;
     private int item_Image;
     private int item_Description;
+    private int item_Price;
 
-    public ListItem(int Title, int Image, int Description){
+
+    public ListItem(int Title, int Image, int Description, int Price){
         item_Title = Title;
         item_Image = Image;
         item_Description = Description;
+        item_Price = Price;
     }
 
     public int getTitle(){
@@ -25,6 +28,10 @@ public class ListItem {
 
     public int getDescription(){
         return item_Description;
+    }
+
+    public int getPrice(){
+        return item_Price;
     }
 
 }

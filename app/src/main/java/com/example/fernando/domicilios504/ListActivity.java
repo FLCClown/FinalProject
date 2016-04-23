@@ -1,9 +1,11 @@
 package com.example.fernando.domicilios504;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -14,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
-    private final List<ListItem> array = new ArrayList<ListItem>();
+    public static final List<ListItem> thisArray = new ArrayList<ListItem>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +24,18 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
         populateList();
         populateListView();
+        registerClick();
     }
 
     private void populateList(){
-        array.add(new ListItem(R.string.Title1, R.string.Image1, R.string.Description1));
-        array.add(new ListItem(R.string.Title2, R.string.Image2, R.string.Description2));
-        array.add(new ListItem(R.string.Title3, R.string.Image3, R.string.Description3));
-        array.add(new ListItem(R.string.Title4, R.string.Image4, R.string.Description4));
-        array.add(new ListItem(R.string.Title5, R.string.Image5, R.string.Description5));
-        array.add(new ListItem(R.string.Title6, R.string.Image6, R.string.Description6));
-        array.add(new ListItem(R.string.Title7, R.string.Image7, R.string.Description7));
-        array.add(new ListItem(R.string.Title8, R.string.Image8, R.string.Description8));
+        thisArray.add(new ListItem(R.string.Title1, R.drawable.pizza, R.string.Description1, R.string.Price1));
+        thisArray.add(new ListItem(R.string.Title2, R.drawable.burger, R.string.Description2, R.string.Price2));
+        thisArray.add(new ListItem(R.string.Title3, R.drawable.pollofrito, R.string.Description3, R.string.Price3));
+        thisArray.add(new ListItem(R.string.Title4, R.drawable.pupusas, R.string.Description4, R.string.Price4));
+        thisArray.add(new ListItem(R.string.Title5, R.drawable.baleadas, R.string.Description5, R.string.Price5));
+        thisArray.add(new ListItem(R.string.Title6, R.drawable.comidachina, R.string.Description6, R.string.Price6));
+        thisArray.add(new ListItem(R.string.Title7, R.drawable.sopas, R.string.Description7, R.string.Price7));
+        thisArray.add(new ListItem(R.string.Title8, R.drawable.tacos, R.string.Description8, R.string.Price8));
     }
 
     private void populateListView(){
@@ -41,9 +44,22 @@ public class ListActivity extends AppCompatActivity {
         list.setAdapter(adapter);
     }
 
+    private void registerClick(){
+        ListView list = (ListView) findViewById(R.id.main_List);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ListItem item = thisArray.get(position);
+                Intent intent = new Intent(ListActivity.this, DetailActivity.class);
+                intent.putExtra("Position", position);
+                startActivity(intent);
+            }
+        });
+    }
+
     private class ListAdapter extends ArrayAdapter<ListItem>{
         public ListAdapter(){
-            super(ListActivity.this, R.layout.listcell, array);
+            super(ListActivity.this, R.layout.listcell, thisArray);
         }
 
         @Override
@@ -52,13 +68,16 @@ public class ListActivity extends AppCompatActivity {
             if(cellView == null){
                 cellView = getLayoutInflater().inflate(R.layout.listcell, parent, false);
             }
-            ListItem item = array.get(index);
+            ListItem item = thisArray.get(index);
             ImageView image = (ImageView) cellView.findViewById(R.id.cell_Image);
             TextView title = (TextView) cellView.findViewById(R.id.cell_Title);
             TextView description = (TextView) cellView.findViewById(R.id.cell_Description);
+            TextView price = (TextView) cellView.findViewById(R.id.cell_Price);
             image.setImageResource(item.getImage());
             title.setText(item.getTitle());
             description.setText(item.getDescription());
+            price.setText(item.getPrice());
+            price.setText(price.getText().toString() + "Lps.");
             return cellView;
         }
 

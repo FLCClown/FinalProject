@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.fernando.domicilios504.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/take_Header"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Title"
+                android:id="@+id/take_Title"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textSize="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtitle"
+                android:id="@+id/take_Sub"
+                android:layout_alignBottom="@+id/take_Header"
+                android:layout_alignLeft="@+id/take_Title"
+                android:layout_alignStart="@+id/take_Title"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Por favor complete su orden:"
+                android:id="@+id/take_Inst"
+                android:layout_below="@+id/take_Header"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:textSize="29dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese la dirección de envío"
+                android:id="@+id/take_Address"
+                android:layout_below="@+id/take_Plus"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:textSize="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/take_AddIn"
+                android:layout_below="@+id/take_Address"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20dp"
+                android:text="Dirección Aquí" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese la cantidad"
+                android:id="@+id/take_Amount"
+                android:layout_below="@+id/take_Inst"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/take_AmountIn"
+                android:layout_below="@+id/take_Amount"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:id="@+id/take_Plus"
+                android:layout_below="@+id/take_Amount"
+                android:layout_toRightOf="@+id/take_AmountIn"
+                android:layout_toEndOf="@+id/take_AmountIn"
+                android:layout_marginLeft="25dp"
+                android:textSize="20dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:id="@+id/take_Minus"
+                android:layout_alignTop="@+id/take_Plus"
+                android:layout_toRightOf="@+id/take_Plus"
+                android:layout_toEndOf="@+id/take_Plus"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x 0"
+                android:id="@+id/take_Multi"
+                android:layout_alignTop="@+id/take_AmountIn"
+                android:layout_toRightOf="@+id/take_Minus"
+                android:layout_toEndOf="@+id/take_Minus"
+                android:layout_marginLeft="10dp"
+                android:textSize="25dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usar Perfil"
+                android:id="@+id/take_Default"
+                android:layout_alignTop="@+id/take_Amount"
+                android:layout_toRightOf="@+id/take_Amount"
+                android:layout_toEndOf="@+id/take_Amount"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese nombre del cliente"
+                android:id="@+id/take_Name"
+                android:layout_below="@+id/take_AddIn"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:textSize="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/take_NameIn"
+                android:layout_below="@+id/take_Name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20dp"
+                android:text="Nombre Aquí" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrese detalles adicionales"
+                android:id="@+id/take_Detail"
+                android:layout_below="@+id/take_NameIn"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:textSize="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/take_DetailIn"
+                android:layout_below="@+id/take_Detail"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20dp"
+                android:text="Detalles Aquí" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completar Orden"
+                android:id="@+id/take_End"
+                android:textSize="25dp"
+                android:layout_below="@+id/take_DetailIn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
